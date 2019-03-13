@@ -17,7 +17,7 @@ $rows = mysqli_num_rows($result);
         mysqli_data_seek($result, 0);  
         $row = mysqli_fetch_assoc($result);		
 	    if ($row['isAdmin'] == 1) {
-/*		$SID = session_id(); //Need for work from same PC
+/*		$SID = session_id(); //Need for work from same Desktop
 		if($row['ip'] == '' && $row['SID'] == '') {
 			queryMysql("UPDATE users  SET ip = '$_SERVER[REMOTE_ADDR]' WHERE isAdmin = 1;");
 			queryMysql("UPDATE users  SET SID = '$SID' WHERE isAdmin = 1;");
