@@ -1,0 +1,1 @@
+SELECT nameVopros,fname,mname,sex,Type,Otvet,Date FROM users JOIN results ON users.UID = results.UID JOIN questions ON questions.idVopros = results.idVopros ORDER BY nameVopros;

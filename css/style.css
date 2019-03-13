@@ -1,0 +1,622 @@
+/*
+STYLE.CSS - Общая таблица стилей для всех интерфейсов
+
+*/
+
+html, body, div, p, a, pre, span {
+margin: 0;
+padding: 0;
+border: 0;
+font-family: Geneva, Arial, Helvetica, sans-serif;
+vertical-align: baseline;
+line-height: 2;
+}
+
+body {
+    background-image: url(city.jpg); 
+    background-color: #c7b39b;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;	
+   }
+
+a:link, a:visited {
+text-decoration: none;
+color: black;
+}
+
+a:hover, a:focus {
+text-shadow: 0.1em 0.1em 0.2em black; color: aliceblue;
+}
+
+
+hr {
+ margin: 0px; 
+}
+
+pre.log {
+     
+    width: 513px;
+    position: absolute;
+    right: 50px;
+    font-size: 1em;
+
+}
+
+p {
+font-weight: bold;
+padding: 10px;
+font-size: 130%;
+width: 285px;
+}
+
+p.act {
+padding: 20px;
+font-size: 130%;
+background: none;
+margin: auto;
+}
+
+
+table {
+  font-family: "Times";
+  font-size: 14px;
+  background: white;
+  border-collapse: collapse;
+  text-align: left;
+  width: inherit;
+}
+
+thead {
+}
+
+tbody {
+overflow: auto;
+}
+
+th {
+  border-bottom: 2px solid gray;
+  padding: 10px 8px;
+}
+td {
+  padding: 9px 8px;
+  transition: .3s linear;
+  cursor: pointer;
+}
+tbody tr:hover {
+	background: gainsboro;
+}    
+
+.nav {
+margin: 0 10px;
+font-style: italic;
+}
+
+.tr_vop {
+opacity: 1;
+}
+.tr_vop:active {
+    background: #414141;
+}
+
+.tr_test {
+}
+
+#invisible {
+ display: none;
+}
+   
+#Show_img {
+   width: 100px;
+}
+
+#Popup_bg {
+ background:rgba(0,0,0,0.4);
+ position:absolute;
+ z-index:1;
+ height:100%;
+ width:100%;
+}
+	
+#content {
+background-color: white;
+margin: 10px;
+padding: 10px;
+
+}
+
+#content_cl {
+background-color: gainsboro;
+margin: 10px;
+padding: 10px;
+position: relative;
+bottom: 50px;
+top: 0px;
+overflow: hidden;
+}
+
+
+#status {
+background: darkgray;
+font-style: italic;
+font-size: small;
+}
+
+#statusWS, 
+#statusTest {
+display: inline-block;	
+}
+
+#credits {
+position: fixed;
+top: 0;
+right: 0;
+background: darkgray;
+font-style: italic;
+font-size: small;
+height: 70px;
+padding: 15px;
+z-index: 10;
+border-radius: 5px;
+}
+
+#timer {
+position: fixed;
+top: 0;
+right: 43%;
+width: 275px;
+border: 4px double black;
+background: white;
+font-size: 30px;
+font-weight: bolder;
+display: block;
+z-index: -1;
+text-shadow: 1px 1px 10px white, 0 0 1em #ff0606;
+}
+
+.weight {
+display: inline-block;
+position: relative;
+z-index: -1;
+font-size: 0.8em;
+}
+
+.pWeight {
+position: relative;
+width: 150px;
+height: 30px;
+font-style: initial;
+font-size: 0.8em;
+}
+
+.pWeight span {
+
+}
+
+.pWeight table, .pWeight th  {
+border-bottom: none;
+}
+.pWeight th  {
+text-align: center;
+font-size: smaller;
+padding: 0;
+}
+
+.pWeight tr th#perC {
+
+}
+
+.pWeight input {
+position: absolute;
+bottom: 0;
+width: 350px;
+}
+
+.pWeight label  {
+margin: 0 4px;
+}
+
+#makeTest,
+#tempTest,
+#clear,
+#countTest {
+display:none;
+}
+
+#login_cl {
+position: relative;
+display: block;	
+margin: 5px;
+padding: 10px;
+}
+
+#login {
+display: block;	
+position: relative;
+background: gainsboro;
+margin: 50px;
+padding: 95px;
+
+}
+
+#logout {
+font-family: "Courier";
+background: darkgray;
+font-size: small;
+width: 200px;
+}
+
+.field  {
+	float: none;
+	width: 170px;
+	margin-right: 10px;
+	font-style: italic;
+	font-size: small;
+}
+
+.tech_info {
+font-family: "Courier";
+background: darkgray;
+font-size: small;
+width: 200px;
+}
+
+.make {
+padding: 5px; 
+font-size: larger;
+display: inline-block;
+}
+
+.make:hover {
+background: gainsboro;
+}
+
+.m_lnk  {
+font-size: larger;
+}
+
+.m_lnk:hover  {
+background: gainsboro;
+}
+
+.ok {
+    margin: 5px;
+    padding: 5px;
+    width: 250px;
+	font-size: small;
+}
+
+#menu {
+position: relative;	
+background-color: darkgray;
+margin-bottom: 15px;
+
+}
+
+#search {
+position: absolute;
+right: 0;
+top: 0;
+margin: 7px;
+}
+
+#main {
+margin-bottom: 15px;
+}
+
+#set {
+}
+
+#set_testing {
+margin: 15px;
+padding: 5px;
+}
+
+
+#wrap_question { 
+position: relative;
+margin: 5px;
+bottom: 10px;
+height: 73%;
+width: 99%;
+font-style: italic;
+min-height: 540px;
+}
+
+#wrap_testing_stat {
+position: fixed;
+padding: 10px;
+background-color: gray;
+border: 5px groove;
+font-family: Times;
+width: 300px;
+right: 5%;
+top: 50%;
+z-index: -1;
+}
+
+#wrap_stat_left {
+	display: inline-block;
+	float: inline-start;
+	/*left: 0;
+	 border: 5px groove; */
+	
+}
+
+#wrap_stat_right {	
+	display: inline-block;
+	right: 0;
+	width: 55%;
+    padding: 0 15px;
+ /* position: absolute;  
+    border-left: 5px groove; */
+}
+
+#wrap_common_stat {
+padding: 10px;	
+position:relative;
+font-style: italic;
+top: 10px;
+right: 10px;
+bottom: 10px;
+overflow: -moz-hidden-unscrollable;
+margin: 0 auto;
+}
+
+#wrap_question_cl {
+position: relative;
+display: block;
+bottom: 10px;
+height: 73%;
+width: 99%;
+}
+
+#vopros_text {
+background: white;
+margin: 5px;
+padding: 4px;
+width: 600px;
+font-style: italic;
+}
+
+#variants {
+}
+
+#pagin {
+margin: 20px;
+padding: 20px;
+text-align: center;
+}
+
+#err_msg {
+font-weight: bold;
+color: red;
+}
+
+#Vopros {
+      width: 300px;
+	  margin: 50px;
+}
+
+#banner {
+   margin: 0;
+   padding: 0;
+   background-color: gainsboro;
+   text-align: center;  
+   width: 100%;   
+}
+
+
+#banner_cl {
+   margin: 0;
+   padding: 0;
+   text-align: center;  
+   width: 100%;   
+}
+
+
+#panel {
+width: 300px;
+font-weight: bold;
+margin: 5px;
+}
+
+#toHome {
+    margin-left: auto;
+    margin-right: auto;
+    width: 205px;
+    font-size: larger;
+    padding: 10px;
+}
+
+#pdf {
+word-wrap: break-word;
+}
+
+#footer {
+    padding: 0;
+    margin: 0;
+	bottom: 0;
+    width: 100%;
+	position: relative;
+}
+
+#podval {
+   text-align: center;
+   font-size: x-small;
+}
+
+
+#podval_cl {
+   text-align: center;
+   font-size: x-small;
+   }
+   
+.inl_block {
+display: inline-block;
+}
+
+.img_test  > img {
+    width: 400px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+ }	
+ 
+/* Миниатюра изображений */
+.upload-file-container:first-child { 
+	margin-left: 0;
+}
+
+ .upload-file-container > img {
+	width: 200px;
+	height: 200px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+/*  Индикаторы для клиента*/
+#indicator_block {
+display: block;
+}
+
+#progress {
+	width: 400px;
+	border: 4px groove black;
+	position: relative;
+	background-color: white;
+	z-index: 1;
+	height: 32px;
+}
+#prog_v1 {	
+	position: absolute;
+	background-color: blue;
+	z-index: 2;
+	width: 0;
+}
+#prog_v2{
+	background-color: red;
+	float: right;
+	width: 100%;
+   }
+   
+div#prog_v1 > b {
+   float: left;
+   margin-left: 10px;
+}
+
+div#prog_v2 > b {
+	float: right;
+	position: relative;
+    margin-right: 10px;
+	z-index: 5;
+}
+
+#v1,
+#v2 {
+display: none;
+}
+
+#za_v1 {
+color: blue;
+}
+
+#za_v2 {
+color: red;
+}
+
+.otvet {
+	 display: table-cell;
+}
+
+.variant {
+    display: inline-block;
+    margin: 5px 30px;
+    padding: 5px;
+    font-style: italic;
+}
+
+.variant_radio {
+cursor: pointer;
+}
+
+.ws_resp {
+font-style: italic;
+font-weight: bold;
+background: white;
+width: 50px;
+display: inline-block;
+}
+
+.radio input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 7px;
+}
+.radio__text {
+  position: relative;
+  padding: 0 0 0 35px;
+  cursor: pointer;
+}
+.radio__text:before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #CDD1DA;
+  border-radius: 50%;
+  background: #FFF;
+}
+.radio__text:after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: darkgray;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
+  opacity: 0;
+  transition: .2s;
+}
+.radio input:checked + .radio__text:after {
+  opacity: 1;
+}
+.radio input:focus + .radio__text:before {
+  box-shadow: 0 0 0 3px rgba(255,255,0,.7);
+}
+
+
+/* MEDIA 
+@media screen and (min-device-width: 1600px) {
+#content {
+height: 800px;
+}   
+}*/
+
+@media screen and (max-device-width: 1280px) {
+#wrap_question {
+height: auto;
+} 
+
+@media screen and (max-device-width: 400px) {
+#wrap_question {
+height: auto;
+} 
+
+/* PRINT */
+@media print { 
+ body {font-family: Times, 'Times New Roman', serif;}
+ h3 { page-break-before: always; }
+ ol { page-break-inside: avoid;}
+ #banner, #menu, #status, #footer { display: none; }
+ #wrap_common_stat {position: relative; }
+ .field { width: auto;}
+ .make { display: none;}
+}

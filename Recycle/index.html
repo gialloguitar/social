@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WS-chat</title>
+</head>
+<body>
+     <h1>ЧАТ для Одминов</h1>
+     <form action="">
+     Name:<input type="text" placeholder="Vasya..." name="name">
+     Message:<input type="text" name="msg">
+     <input type="submit" value="Send">  
+     </form>
+     <div id="status">
+     </div>
+     <script>
+     window.onload = function () {
+          var socket = new WebSocket("ws://chat.np.prombez:8889");
+          var status = document.getElementById("status");    
+              socket.onopen = function (event) {
+                    //open connection
+				
+                    status.innerHTML = "Соединение установлено!";   
+                         }
+              socket.onmessage = function (event) {
+                    //fetch new event
+                   console.log(event);				   
+                   var message = JSON.parse(event.data);
+                   status.innerHTML += "Пришли данные: <b>" + message.name + "</b> " + message.msg + "<br>";
+                   					
+                         }
+              socket.onclose  = function (event)  {
+                    // close connection
+                         if (event.wasClean) {
+                               status.innerHTML = "Соединение нормально закрыто";  
+                                 }     
+                         else {
+                               status.innerHTML = "Cоединение закрыто плохо";
+                             }
+                               status.innerHTML += "<br>Код: " +event.code + " причина:" + event.reason;
+                         }
+              socket.onerror = function (event)   {
+                    // connection error
+                      status.innerHTML = "ошибка: " + event.message;        
+                 
+                         } 
+              document.forms[0].onsubmit = function () {
+                         var message = {  
+                                     name:   this.name.value,
+                                     msg:    this.msg.value
+                                     };
+                         socket.send(JSON.stringify(message));
+						// console.log(JSON.stringify(message));
+                         return false;
+                         }
+     }
+     </script>
+</body>
+</html>
