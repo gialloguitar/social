@@ -8,7 +8,7 @@
 //echo "HTTP_HOST: ".$_SERVER['HTTP_HOST']."<br>";
 mysqli_close($connection); 
 ?>
-Social Testing 2018
+Social Testing 2018 by VladimirP
 </div>
 </div>
  </body>
